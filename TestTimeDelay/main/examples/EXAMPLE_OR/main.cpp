@@ -63,8 +63,9 @@ extern "C" void app_main(void)
         bool I2 = not gpio_get_level(BUTTON_I2);
         bool I3 = not gpio_get_level(BUTTON_I3);
 
+        bool A = I1 or I2 ;
         bool B = not I3 ;
-        bool Q1 = (I1 or I2) and B  ;
+        bool Q1 = A and B  ;
 
 
         // Ausgaenge setzen
