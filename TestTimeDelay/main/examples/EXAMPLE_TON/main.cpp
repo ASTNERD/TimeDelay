@@ -39,6 +39,7 @@ extern "C" void app_main(void)
     */
     gpio_reset_pin(GPIO_Q1);
     gpio_reset_pin(BUTTON_I1);
+
     /* Set the GPIO as a push/pull output */
     gpio_set_direction(GPIO_Q1, GPIO_MODE_OUTPUT);
     gpio_set_direction(BUTTON_I1, GPIO_MODE_INPUT);
@@ -46,7 +47,7 @@ extern "C" void app_main(void)
 
 
     TON TON1;
-    TON1.PT = 1000;
+    TON1.PT = 500;
 
     while (true) // Endlos-Schleife
     {
